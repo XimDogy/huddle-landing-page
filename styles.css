@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+:root {
+    --violet: hsl(257, 40%, 49%);
+    --softMagenta: hsl(300, 69%, 71%);
+    --white: rgb(255, 255, 255);
+    --head-font-family: 'Poppins', sans-serif;
+    --body-font-family: 'Open Sans', sans-serif;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--violet);
+    background-image: url(/images/bg-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: auto 100vh; /*width height */
+}
+
+.container {
+    width: 90%;
+    margin: 0px auto;
+}
+
+#logo {
+    margin-top: 3%;
+    height: 50px;
+}
+
+.hero {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-hero {
+    position: relative;
+    width: 50%;
+}
+.left-hero img {
+    width: 100%;
+}
+
+
+.right-hero {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    padding: 3%;
+}
+.right-hero p, button { 
+    margin-top: 8%;
+}
+.right-hero h1 {
+    font-family: var(--head-font-family);
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+.right-hero p {
+    font-size: 1.2rem;
+    font-family: var(--body-font-family);
+}
+
+#register-btn {
+    background: var(--white);
+    color: var(--violet);
+    font-family: var(--head-font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 50px;
+    height: 45px;
+    max-width: 180px;
+    border: none;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.3);
+}
+
+#register-btn:hover {
+    color: var(--white);
+    background: var(--softMagenta);
+    cursor: pointer;
+}
+#register-btn:active,:focus {
+    outline: none;
+}
+
+.social-medias {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-border {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--white);
+    border-radius: 100%;
+    height: 50px;
+    width: 50px;
+}
+
+.social-icon {
+    height: 25px;
+    width: 25px;
+    margin-top: 3px;
+}
+.social-border:hover {
+    border-color: var(--softMagenta);
+    cursor: pointer;
+}
+
+.social-icon {
+    fill: var(--white);
+}
+.social-border:hover .social-icon {
+    fill: var(--softMagenta);
+}
+
+ /* Responsive */
+
+@media only screen and (max-width: 1024px) {
+    body {
+        background-image: url(/images/bg-mobile.svg);
+        background-size: 100% auto;
+    }
+    .container {
+       width: 82%;
+    }
+    #logo {
+        margin-top: 8%;
+        height: 35px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .left-hero, .right-hero {
+        margin-top: 12%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .right-hero h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .right-hero p {
+        text-align: center;
+    }
+
+    #register-btn {
+        align-self: center;
+        width: 250px;
+    }
+    
+    .social-medias {
+        margin-top: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-border {
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid var(--white);
+        border-radius: 100%;
+        height: 35px;
+        width: 35px;
+    }
+    
+    .social-icon {
+        height: 15px;
+        margin-top: 3px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+
+    .right-hero p {
+        text-align: center;
+    }
+
+    #register-btn {
+        align-self: center;
+        width: 250px;
+    }
+
+    .social-medias {
+        margin-top: 15%;
+        margin-bottom: 15%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-border {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid var(--white);
+        height: 35px;
+        width: 35px;
+    }
+
+    .social-icon {
+        height: 15px;
+        margin-top: 5px;
+    }
+
+    
+}
